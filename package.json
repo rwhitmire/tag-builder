@@ -1,0 +1,20 @@
+{
+  "name": "tag-builder",
+  "version": "1.0.0",
+  "description": "Fluent html tag building library",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "keywords": [
+    "html",
+    "tag",
+    "builder",
+    "fluent"
+  ],
+  "author": "Ryan Whitmire",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
