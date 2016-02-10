@@ -13,7 +13,7 @@
     "fluent"
   ],
   "author": "Ryan Whitmire",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "mocha": "^2.4.5"
   }
