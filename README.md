@@ -44,7 +44,7 @@ const html = ul.toString()
 assert.equal(html, '<ul><li>1</li><li>2</li></ul>')
 ```
 
-See tests for more examples.
+See [tests](https://github.com/rwhitmire/tag-builder/blob/master/test/index.test.js) for more examples.
 
 ## API
 
