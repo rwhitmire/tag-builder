@@ -25,7 +25,7 @@ function TagBuilder(tagName) {
   if(!tagName) {
     throw new Error('tagName parameter is required')
   }
-  
+
   this._tagName = tagName
   this._content = ''
   this._classNames = {}
@@ -69,13 +69,13 @@ TagBuilder.prototype.addClass = function(className) {
 TagBuilder.prototype.toString = function() {
   const attr = stringifyAttr(this._attr)
   const classNames = stringifyClassNames(this._classNames)
-  
+
   var tag = `<${this._tagName}${classNames}${attr}>`
-  
+
   if(!isSelfClosing(this._tagName)) {
     tag = `${tag}${this._content}</${this._tagName}>`
   }
-  
+
   return tag
 }
 
@@ -85,32 +85,36 @@ function isSelfClosing(tag) {
 
 function stringifyClassNames(classNames) {
   var str = ''
-  
+
   for(var key in classNames){
     str += key + ' '
   }
-  
+
   str = str.trim()
-  
+
   if(str.length == 0) return ''
-  
+
   return stringifyAttr({'class': str})
 }
 
 function stringifyAttr(attr) {
   var str = ''
-  
-  for(var key in attr) {
-    str += ` ${key}="${attr[key]}"`
+
+  for (var key in attr) {
+    if (attr[key]) {
+      str += ` ${key}="${attr[key]}"`
+    } else {
+      str += ` ${key}`;
+    }
   }
-  
+
   str = str.trim()
-  
+
   // prepend a space if attributes exist
   if(str.length > 0) {
     str = ` ${str}`
   }
-  
+
   return str
 }
 
