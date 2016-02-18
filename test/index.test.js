@@ -82,10 +82,13 @@ describe('TagBuilder', () => {
   it('should set attributes without a value', () => {
     const html = TagBuilder
       .create('div')
-      .attr({ 'lorem': null })
+      .attr({
+        'ipsum': 0,
+        'lorem': null
+      })
       .toString()
 
-    assert.equal(html, '<div lorem></div>')
+    assert.equal(html, '<div ipsum="0" lorem></div>')
   })
 
   it('should merge attributes', () => {

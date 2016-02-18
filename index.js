@@ -101,10 +101,10 @@ function stringifyAttr(attr) {
   var str = ''
 
   for (var key in attr) {
-    if (attr[key]) {
-      str += ` ${key}="${attr[key]}"`
-    } else {
+    if (attr[key] === null) {
       str += ` ${key}`;
+    } else {
+      str += ` ${key}="${attr[key]}"`
     }
   }
 
