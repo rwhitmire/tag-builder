@@ -24,12 +24,13 @@ const html = TagBuilder
   .create('input')
   .attr({
     'type': 'password',
-    'name': 'password'
+    'name': 'password',
+    'required': null
   })
   .addClass('form-control')
   .toString()
   
-assert.equal(html, '<input type="password" name="password" class="form-control">')
+assert.equal(html, '<input type="password" name="password" class="form-control" required>')
 ```
 
 ``` js
