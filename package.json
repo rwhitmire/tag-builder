@@ -1,6 +1,6 @@
 {
   "name": "tag-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fluent html tag building library",
   "main": "index.js",
   "scripts": {
